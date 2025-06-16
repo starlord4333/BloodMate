@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BloodMate - Admin Panel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff0f0;
+      color: #333;
+    }
+    header {
+      background-color: #d92e2e;
+      padding: 15px 0;
+      text-align: center;
+      color: white;
+      font-weight: 700;
+      font-size: 22px;
+      box-shadow: 0 2px 5px rgba(217, 46, 46, 0.5);
+    }
+    .panel {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px 35px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgb(217 46 46 / 0.2);
+    }
+    h2 {
+      color: #d92e2e;
+      margin-bottom: 30px;
+      font-weight: 700;
+      text-align: center;
+    }
+    .section {
+      margin-bottom: 25px;
+    }
+    .section-title {
+      font-weight: 700;
+      color: #d92e2e;
+      font-size: 18px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d92e2e;
+      padding-bottom: 4px;
+    }
+    .card {
+      background-color: #ffe8e8;
+      padding: 15px 20px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      border-left: 6px solid #d92e2e;
+      color: #6b0000;
+      font-weight: 600;
+    }
+    .card.stat {
+      border-left-color: #a33b00;
+      background-color: #fff2e6;
+      color: #a35400;
+    }
+  </style>
+</head>
+<body>
+  <header>BloodMate</header>
+
+  <div class="panel">
+    <h2>Admin Dashboard</h2>
+
+    <div class="section">
+      <div class="section-title">📝 New Blood Requests</div>
+      <div class="card">🔴 A+ | 2 Units | <strong>Urgent</strong></div>
+      <div class="card">🟡 B- | 1 Unit | <strong>Moderate</strong></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">📊 Donor Statistics</div>
+      <div class="card stat">✅ 8 Available Donors Nearby</div>
+      <div class="card stat">🩸 3 Scheduled Donations</div>
+    </div>
+  </div>
+</body>
+</html>

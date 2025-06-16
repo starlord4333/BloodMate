@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BloodMate | Register</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff3f3;
+      margin: 0;
+    }
+    header {
+      background-color: #d32f2f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .form-container {
+      max-width: 500px;
+      background: white;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .form-container h2 {
+      text-align: center;
+      color: #d32f2f;
+    }
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #d32f2f;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #b71c1c;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Register with BloodMate</h1>
+</header>
+
+<div class="form-container">
+  <h2>Sign Up as Donor or Receiver</h2>
+  <form>
+    <input type="text" placeholder="Full Name" required>
+    <input type="text" placeholder="Email" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <select required>
+      <option value="">Select Blood Group</option>
+      <option>A+</option>
+      <option>B+</option>
+      <option>O+</option>
+      <option>AB+</option>
+      <option>A-</option>
+      <option>B-</option>
+      <option>O-</option>
+      <option>AB-</option>
+    </select>
+    <input type="text" placeholder="City / Location" required>
+    <select required>
+      <option value="">Register As</option>
+      <option value="donor">Donor</option>
+      <option value="receiver">Receiver</option>
+    </select>
+    <button type="submit">Register</button>
+  </form>
+</div>
+
+</body>
+</html>

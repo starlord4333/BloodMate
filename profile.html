@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BloodMate - Donor Profile</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff0f0;
+      color: #333;
+    }
+    header {
+      background-color: #d92e2e;
+      padding: 15px 0;
+      text-align: center;
+      color: white;
+      font-weight: 700;
+      font-size: 22px;
+      box-shadow: 0 2px 5px rgba(217, 46, 46, 0.5);
+    }
+    .container {
+      max-width: 480px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px 35px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgb(217 46 46 / 0.2);
+    }
+    h2 {
+      color: #d92e2e;
+      margin-bottom: 25px;
+      font-weight: 700;
+      text-align: center;
+    }
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .info-label {
+      font-weight: 600;
+      color: #d92e2e;
+    }
+    .info-value {
+      color: #555;
+    }
+    .btns {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .btn {
+      background-color: #d92e2e;
+      border: none;
+      padding: 12px 35px;
+      color: white;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+      font-size: 16px;
+    }
+    .btn:hover {
+      background-color: #b32222;
+    }
+  </style>
+</head>
+<body>
+  <header>BloodMate</header>
+
+  <div class="container">
+    <h2>Donor Profile</h2>
+    <div class="info-row">
+      <div class="info-label">Name:</div>
+      <div class="info-value">Santosh Kumar</div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">Blood Group:</div>
+      <div class="info-value">B+</div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">Location:</div>
+      <div class="info-value">VVIT, Guntur</div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">Last Donation:</div>
+      <div class="info-value">25 May 2025</div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">Total Donations:</div>
+      <div class="info-value">5</div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">Availability:</div>
+      <div class="info-value">✅ Active</div>
+    </div>
+    <div class="btns">
+      <button class="btn">Edit Info</button>
+      <button class="btn">Deactivate</button>
+    </div>
+  </div>
+</body>
+</html>

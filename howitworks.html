@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How BloodMate Connects Hearts</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff3f3;
+    margin: 0;
+    padding: 40px 20px;
+    color: #333;
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    color: #111;
+  }
+
+  h1 .highlight {
+    color: #d32f2f;
+  }
+
+  .steps-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fde8ea;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgb(211 47 47 / 0.12);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+  }
+
+  .step-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgb(0 0 0 / 0.08);
+    padding: 25px 20px 40px;
+    position: relative;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .step-card:hover {
+    box-shadow: 0 8px 20px rgb(211 47 47 / 0.3);
+  }
+
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #d32f2f, #f44336);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 12px rgb(211 47 47 / 0.5);
+  }
+
+  .step-title {
+    color: #d32f2f;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-top: 40px;
+    margin-bottom: 12px;
+  }
+
+  .step-description {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
+  }
+
+  /* Icon SVG styling */
+  .icon-circle svg {
+    fill: white;
+    width: 28px;
+    height: 28px;
+  }
+</style>
+</head>
+<body>
+
+  <h1>How <span class="highlight">BloodMate</span> Connects Hearts?</h1>
+
+  <div class="steps-container">
+    <div class="step-card">
+      <div class="icon-circle" aria-label="Mobile Phone Icon">
+        <!-- Mobile phone icon -->
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M7 2C5.89 2 5 2.89 5 4v16c0 1.1.89 2 2 2h10c1.1 0 2-.9 2-2V4c0-1.11-.9-2-2-2H7zm5 18c-.83 0-1.5-.67-1.5-1.5S11.17 17 12 17s1.5.67 1.5 1.5S12.83 20 12 20z"/>
+        </svg>
+      </div>
+      <h3 class="step-title">Download the App</h3>
+      <p class="step-description">
+        Get BloodMate from your app store and create an account.
+      </p>
+    </div>
+
+    <div class="step-card">
+      <div class="icon-circle" aria-label="Add User Icon">
+        <!-- User add icon -->
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-1 2h-2c-2.67 0-8 1.34-8 4v2h18v-2c0-2.66-5.33-4-8-4zM20 10v2h-2v2h-2v-2h-2v-2h2V8h2v2h2z"/>
+        </svg>
+      </div>
+      <h3 class="step-title">Connect Contacts</h3>
+      <p class="step-description">
+        Sync your contacts to find potential blood donors.
+      </p>
+    </div>
+
+    <div class="step-card">
+      <div class="icon-circle" aria-label="Chat Bubble Icon">
+        <!-- Chat bubble icon -->
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4 4h16v12H5.17L4 17.17V4zM2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2H2z"/>
+        </svg>
+      </div>
+      <h3 class="step-title">Request Blood</h3>
+      <p class="step-description">
+        Send a blood request to your network when in need.
+      </p>
+    </div>
+
+    <div class="step-card">
+      <div class="icon-circle" aria-label="Heart Icon">
+        <!-- Heart icon -->
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3
+            7.5 3c1.74 0 3.41 1.01 4.5 2.09C13.09 4.01
+            14.76 3 16.5 3 19.58 3 22 5.42 22
+            8.5c0 3.78-3.4 6.86-8.55
+            11.54L12 21.35z"/>
+        </svg>
+      </div>
+      <h3 class="step-title">Save Lives</h3>
+      <p class="step-description">
+        Connect with donors and potentially save a life.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

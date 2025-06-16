@@ -2,61 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BloodMate - Donate Life</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BloodMate</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f8f8;
+      color: #333;
+    }
+    header {
+      background: #c62828;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: #b71c1c;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    iframe {
+      width: 100%;
+      height: calc(100vh - 140px);
+      border: none;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="logo">BloodMate</div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Features</a>
-      <a href="#">Contact</a>
-    </nav>
+    <h1>BloodMate</h1>
+    <p>Your trusted blood donation partner</p>
   </header>
 
-  <section class="hero">
-    <h1>Connect. Donate. Save Lives.</h1>
-    <p>Join the community and help those in urgent need of blood.</p>
-    <div class="buttons">
-      <a href="#" class="btn android">Download for Android</a>
-      <a href="#" class="btn ios">Download for iOS</a>
-    </div>
-  </section>
+  <nav>
+    <a href="#" onclick="loadPage('homepage.html')">Home</a>
+    <a href="#" onclick="loadPage('howitworks.html')">How It Works</a>
+    <a href="#" onclick="loadPage('register.html')">Register</a>
+    <a href="#" onclick="loadPage('login.html')">Login</a>
+    <a href="#" onclick="loadPage('profile.html')">Profile</a>
+    <a href="#" onclick="loadPage('adminpanel.html')">Admin Panel</a>
+  </nav>
 
-  <section class="features">
-    <h2>Why BloodMate?</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Easy Registration</h3>
-        <p>Register as a donor or receiver in seconds.</p>
-      </div>
-      <div class="card">
-        <h3>Smart Matching</h3>
-        <p>Get instant alerts when donors are nearby.</p>
-      </div>
-      <div class="card">
-        <h3>Secure Contacts</h3>
-        <p>Chat and contact donors safely and easily.</p>
-      </div>
-    </div>
-  </section>
+  <iframe id="main-frame" src="homepage.html"></iframe>
 
-  <section class="how-it-works">
-    <h2>How It Works</h2>
-    <ol>
-      <li>Register your profile</li>
-      <li>Choose to donate or request blood</li>
-      <li>Get notified when a match is found</li>
-    </ol>
-  </section>
+  <script>
+    const frame = document.getElementById('main-frame');
+    frame.onload = () => frame.style.opacity = 1;
 
-  <footer>
-    <p>&copy; 2025 BloodMate. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+    function loadPage(page) {
+      frame.style.opacity = 0;
+      setTimeout(() => {
+        frame.src = page;
+      }, 200);
+    }
+  </script>
 </body>
 </html>

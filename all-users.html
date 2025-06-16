@@ -42,6 +42,13 @@
       tbody.appendChild(row);
     });
   </script>
+  <script>
+  const currentUser = JSON.parse(localStorage.getItem('bloodmateUser'));
+  if (!currentUser || currentUser.role !== "admin") {
+    alert("Access Denied! Admins only.");
+    window.location.href = "login.html";
+  }
+</script>
 </body>
 </html>
 

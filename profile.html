@@ -70,36 +70,30 @@
 <body>
   <header>BloodMate</header>
 
-  <div class="container">
-    <h2>Donor Profile</h2>
-    <div class="info-row">
-      <div class="info-label">Name:</div>
-      <div class="info-value">Santosh Kumar</div>
-    </div>
-    <div class="info-row">
-      <div class="info-label">Blood Group:</div>
-      <div class="info-value">B+</div>
-    </div>
-    <div class="info-row">
-      <div class="info-label">Location:</div>
-      <div class="info-value">VVIT, Guntur</div>
-    </div>
-    <div class="info-row">
-      <div class="info-label">Last Donation:</div>
-      <div class="info-value">25 May 2025</div>
-    </div>
-    <div class="info-row">
-      <div class="info-label">Total Donations:</div>
-      <div class="info-value">5</div>
-    </div>
-    <div class="info-row">
-      <div class="info-label">Availability:</div>
-      <div class="info-value">✅ Active</div>
-    </div>
-    <div class="btns">
-      <button class="btn">Edit Info</button>
-      <button class="btn">Deactivate</button>
-    </div>
-  </div>
+ <div class="container">
+  <h2>Donor Profile</h2>
+  <div class="info-row"><div class="info-label">Name:</div><div id="name"></div></div>
+  <div class="info-row"><div class="info-label">Blood Group:</div><div id="bloodGroup"></div></div>
+  <div class="info-row"><div class="info-label">Location:</div><div id="location"></div></div>
+  <div class="info-row"><div class="info-label">Last Donation:</div><div id="lastDonation"></div></div>
+  <div class="info-row"><div class="info-label">Total Donations:</div><div id="totalDonations"></div></div>
+  <div class="info-row"><div class="info-label">Availability:</div><div id="availability"></div></div>
+</div>
+
+<script>
+  const user = JSON.parse(localStorage.getItem('bloodmateUser'));
+  if (user) {
+    document.getElementById('name').textContent = user.name;
+    document.getElementById('bloodGroup').textContent = user.bloodGroup || "-";
+    document.getElementById('location').textContent = user.location || "-";
+    document.getElementById('lastDonation').textContent = user.lastDonation || "N/A";
+    document.getElementById('totalDonations').textContent = user.totalDonations || 0;
+    document.getElementById('availability').textContent = user.availability || "Unknown";
+  } else {
+    alert("No user found. Please login first.");
+    window.location.href = "login.html";
+  }
+</script>
+
 </body>
 </html>

@@ -94,6 +94,14 @@
     window.location.href = "login.html";
   }
 </script>
+  <button onclick="logout()">Logout</button>
+<script>
+  function logout() {
+    localStorage.removeItem('bloodmateUser');
+    window.location.href = 'login.html';
+  }
+</script>
+
 
 </body>
 </html>

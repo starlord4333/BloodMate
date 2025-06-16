@@ -118,6 +118,32 @@
     window.location.href = "profile.html";
   }
 </script>
+<script>
+  function loginUser(event) {
+    event.preventDefault();
+    const username = document.querySelector('input[placeholder="Username"]').value;
+    const password = document.querySelector('input[placeholder="Password"]').value;
+
+    let user = {
+      name: username,
+      role: "user", // default role
+      bloodGroup: "O+",
+      location: "VVIT, Guntur",
+      lastDonation: "June 1, 2025",
+      totalDonations: 3,
+      availability: "✅ Active"
+    };
+
+    if (username === "admin" && password === "admin123") {
+      user.role = "admin";
+    }
+
+    localStorage.setItem("bloodmateUser", JSON.stringify(user));
+
+    alert("Logged in as " + user.role);
+    window.location.href = user.role === "admin" ? "adminpanel.html" : "profile.html";
+  }
+</script>
 
 
 </body>

@@ -98,6 +98,37 @@
     window.location.href = "profile.html";
   }
 </script>
+  <script>
+  function registerUser(event) {
+    event.preventDefault();
+
+    // Create user object
+    const user = {
+      name: document.querySelector('input[placeholder="Full Name"]').value,
+      email: document.querySelector('input[placeholder="Email"]').value,
+      phone: document.querySelector('input[placeholder="Phone Number"]').value,
+      bloodGroup: document.querySelectorAll('select')[0].value,
+      location: document.querySelector('input[placeholder="City / Location"]').value,
+      role: document.querySelectorAll('select')[1].value
+    };
+
+    // Get existing users or initialize empty array
+    const existingUsers = JSON.parse(localStorage.getItem('bloodmateUsers')) || [];
+
+    // Add new user
+    existingUsers.push(user);
+
+    // Save back to localStorage
+    localStorage.setItem('bloodmateUsers', JSON.stringify(existingUsers));
+
+    // Also save current user separately (for profile view)
+    localStorage.setItem('bloodmateUser', JSON.stringify(user));
+
+    alert("Registered successfully!");
+    window.location.href = "profile.html";
+  }
+</script>
+
 
 
 </body>

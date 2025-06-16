@@ -67,7 +67,7 @@
 <body>
   <div class="login-container">
     <h2>BloodMate</h2>
-    <form onsubmit="loginUser(event)">
+   <form onsubmit="loginUser(event)">
       <input type="text" placeholder="Username" required />
       <input type="password" placeholder="Password" required />
       <button type="submit">Login</button>
@@ -93,6 +93,32 @@
     window.location.href = "profile.html";
   }
 </script>
+  <script>
+  function loginUser(event) {
+    event.preventDefault();
+    const username = document.querySelector('input[placeholder="Username"]').value;
+    const password = document.querySelector('input[placeholder="Password"]').value;
+
+    let user = {
+      name: username,
+      role: "user", // default
+      bloodGroup: "O+",
+      location: "VVIT, Guntur",
+      lastDonation: "June 1, 2025",
+      totalDonations: 3,
+      availability: "✅ Active"
+    };
+
+    if (username === "admin" && password === "admin123") {
+      user.role = "admin"; // assign admin role
+    }
+
+    localStorage.setItem("bloodmateUser", JSON.stringify(user));
+    alert("Logged in as " + user.role);
+    window.location.href = "profile.html";
+  }
+</script>
+
 
 </body>
 </html>
